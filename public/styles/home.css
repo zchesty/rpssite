@@ -1,0 +1,46 @@
+html, body{
+    margin: 0;
+    height:100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+ol {
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+.col {
+    border:1px solid black;
+}
+
+.container {
+    height: 70%;
+}
+
+.rowOuter {
+    height: 100%;
+}
+
+.rowInner {
+    height: 33.33%;
+}
+
+.btn {
+    border: none;
+}
+
+.choiceDisplay {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-size: 56px;
+}
+
+.history {
+     overflow-y: auto;
+     padding-right: 20px;
+}
