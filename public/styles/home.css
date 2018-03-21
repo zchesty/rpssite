@@ -44,3 +44,13 @@ ol {
      overflow-y: auto;
      padding-right: 20px;
 }
+
+.win {
+    background-color: green;
+}
+.loss {
+    background-color: red;
+}
+.tie {
+    background-color: yellow;
+}

@@ -91,46 +91,72 @@ var resultLogic = {
     winnerString: function(humanChoice, computerChoice) {
       if (humanChoice === "rock") {
           if (computerChoice === "scissors") {
+              this.setResultDiv("win");
               return this.humanWins(humanChoice, computerChoice);
           }
           else if (computerChoice === "paper") {
+              this.setResultDiv("loss");
               return this.computerWins(humanChoice, computerChoice);
           }
           else {
+              this.setResultDiv("tie");
               return this.tie(humanChoice, computerChoice);
           }
       }
       if (humanChoice === "paper") {
           if (computerChoice === "rock") {
+              this.setResultDiv("win");
               return this.humanWins(humanChoice, computerChoice);
           }
           else if (computerChoice === "scissors") {
+              this.setResultDiv("loss");
               return this.computerWins(humanChoice, computerChoice);
           }
           else {
+              this.setResultDiv("tie");
               return this.tie(humanChoice, computerChoice);
           }
       }
       if (humanChoice === "scissors") {
           if (computerChoice === "paper") {
+              this.setResultDiv("win");
               return this.humanWins(humanChoice, computerChoice);
           }
           else if (computerChoice === "rock") {
+              this.setResultDiv("loss");
               return this.computerWins(humanChoice, computerChoice);
           }
           else {
+              this.setResultDiv("tie");
               return this.tie(humanChoice, computerChoice);
           }
       }
-  },
-  humanWins: function(humanChoice, computerChoice) {
+    },
+    humanWins: function(humanChoice, computerChoice) {
       return name + " beat the computers " + computerChoice + " with " + humanChoice;
-  },
-  computerWins: function(humanChoice, computerChoice) {
+    },
+    computerWins: function(humanChoice, computerChoice) {
       return name + " lost to the computers " + computerChoice + " with " + humanChoice;
-  },
-  tie: function(humanChoice, computerChoice) {
+    },
+    tie: function(humanChoice, computerChoice) {
       return name + " tied with the computers " + computerChoice + " with " + humanChoice;
-  }
+    },
+    setResultDiv: function(result) {
+        if (result === "win") {
+           document.getElementById("result").classList.remove("loss");
+           document.getElementById("result").classList.remove("tie");
+           document.getElementById("result").classList.add("win");
+        }
+        else if (result === "loss") {
+            document.getElementById("result").classList.remove("win");
+            document.getElementById("result").classList.remove("tie");
+            document.getElementById("result").classList.add("loss");
+        }
+        else {
+            document.getElementById("result").classList.remove("win");
+            document.getElementById("result").classList.remove("loss");
+            document.getElementById("result").classList.add("tie");
+        }
+    } 
 };
 
